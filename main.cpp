@@ -7,7 +7,6 @@
 
 using namespace std;
 
-// Customer class
 class Customer {
 public:
   Customer(string name, string phone_number)
@@ -20,7 +19,6 @@ private:
   string phone_number_;
 };
 
-// Customer table class
 class CustomerTable {
 public:
   void addCustomer(string name, string phone_number) {
@@ -88,13 +86,9 @@ bool validatePhoneNumber(string phone_number) {
 }
 
 int main() {
-  // Create a customer table
+
   CustomerTable table;
-
-  // Load the table from a file
   table.loadTableFromFile("customers.txt");
-
-  // Add customers to the table
   string name, phone_number;
   while (true) {
     while (true) {
@@ -117,13 +111,8 @@ int main() {
     table.addCustomer(name, phone_number);
   }
 
-  // Print the table
   table.printTable();
-
-  // Save the table to a file
   table.saveTableToFile("customers.txt");
-
-  // Remove a customer from the table
   string remove_name;
   cout << "Enter a customer name to remove (or 'q' to print all customers): ";
   cin >> remove_name;
