@@ -75,7 +75,6 @@ public:
 private:
     vector<Customer> customers_;
 };
-
 int main() {
     // Create a customer table
     CustomerTable table;
